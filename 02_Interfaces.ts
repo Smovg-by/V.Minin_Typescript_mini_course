@@ -1,4 +1,9 @@
 // for file compilation call the following string in Terminal: tsc 02_Interfaces.ts
+//===One of TypeScript’s core principles is that type checking focuses on the 'shape'
+// that values have. This is sometimes called “duck typing” or “structural subtyping”.
+// In TypeScript, interfaces fill the role of naming these types, and are a powerful
+// way of defining contracts within your code as well as contracts with code outside
+// of your project.
 interface Rect {
   // "readonly" means you acn not assign another value to the property.
   readonly id: string;
@@ -66,8 +71,12 @@ class Click implements Iclock {
   }
 }
 //===
-const css = {
-  border: "1ps solid black"
-  marginTop: "2px"
-  borderRadius: "5px"
+interface Styles {
+  [key:string]: string; // use this string to add different types of keys in certain way
 }
+
+const css: Styles = {
+  border: "1ps solid black",
+  marginTop: "2px",
+  borderRadius: "5px",
+};
