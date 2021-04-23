@@ -8,7 +8,7 @@ const arraysOfNumber: Array<number> = [1,2,3,4]
 const arraysOfStrings: Array<string> = ['Hello', 'Vladilen']
 
 // now we use abstract generic type that adopts to any datatype that function handles
-
+// dont need to define AnyArrType, it defindes itself and depends on array data type number or string
 function reverse<AnyArrType>(array: AnyArrType[]): AnyArrType[]{
   return array.reverse();
 }
